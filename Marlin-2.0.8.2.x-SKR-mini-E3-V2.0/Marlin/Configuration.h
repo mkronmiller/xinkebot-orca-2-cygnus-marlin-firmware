@@ -1540,19 +1540,19 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
-#define LEVEL_BED_CORNERS
+// #define LEVEL_BED_CORNERS
 
-#if ENABLED(LEVEL_BED_CORNERS)
-  #define LEVEL_CORNERS_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
-  #define LEVEL_CORNERS_HEIGHT      0.0   // (mm) Z height of nozzle at leveling points
-  #define LEVEL_CORNERS_Z_HOP       4.0   // (mm) Z height of nozzle between leveling points
-  //#define LEVEL_CENTER_TOO              // Move to the center after the last corner
-  //#define LEVEL_CORNERS_USE_PROBE
-  #if ENABLED(LEVEL_CORNERS_USE_PROBE)
-    #define LEVEL_CORNERS_PROBE_TOLERANCE 0.1
-    #define LEVEL_CORNERS_VERIFY_RAISED   // After adjustment triggers the probe, re-probe to verify
-    //#define LEVEL_CORNERS_AUDIO_FEEDBACK
-  #endif
+// #if ENABLED(LEVEL_BED_CORNERS)
+//   #define LEVEL_CORNERS_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
+//   #define LEVEL_CORNERS_HEIGHT      0.0   // (mm) Z height of nozzle at leveling points
+//   #define LEVEL_CORNERS_Z_HOP       4.0   // (mm) Z height of nozzle between leveling points
+//   //#define LEVEL_CENTER_TOO              // Move to the center after the last corner
+//   //#define LEVEL_CORNERS_USE_PROBE
+//   #if ENABLED(LEVEL_CORNERS_USE_PROBE)
+//     #define LEVEL_CORNERS_PROBE_TOLERANCE 0.1
+//     #define LEVEL_CORNERS_VERIFY_RAISED   // After adjustment triggers the probe, re-probe to verify
+//     //#define LEVEL_CORNERS_AUDIO_FEEDBACK
+//   #endif
 
   /**
    * Corner Leveling Order
@@ -1571,8 +1571,8 @@
    *  |  1       2  |   | 1         4 |    | 1         2 |   | 2           |
    *  LF --------- RF   LF --------- RF    LF --------- RF   LF --------- RF
    */
-  #define LEVEL_CORNERS_LEVELING_ORDER { LF, RF, RB, LB }
-#endif
+//   #define LEVEL_CORNERS_LEVELING_ORDER { LF, RF, RB, LB }
+// #endif
 
 /**
  * Commands to execute at the end of G29 probing.
@@ -1603,8 +1603,8 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT X_BED_SIZE  // X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT Y_BED_SIZE  // Y point for Z homing
 #endif
 
 // Homing speeds (mm/min)
