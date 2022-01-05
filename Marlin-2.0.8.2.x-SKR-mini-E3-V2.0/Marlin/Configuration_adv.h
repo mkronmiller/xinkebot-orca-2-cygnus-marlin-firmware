@@ -2392,25 +2392,25 @@
   #endif
 
   #if AXIS_DRIVER_TYPE_Z(TMC26X)
-    #define Z_MAX_CURRENT     1000
+    #define Z_MAX_CURRENT     1500
     #define Z_SENSE_RESISTOR    91
     #define Z_MICROSTEPS        16
   #endif
 
   #if AXIS_DRIVER_TYPE_Z2(TMC26X)
-    #define Z2_MAX_CURRENT    1000
+    #define Z2_MAX_CURRENT    1500
     #define Z2_SENSE_RESISTOR   91
     #define Z2_MICROSTEPS       Z_MICROSTEPS
   #endif
 
   #if AXIS_DRIVER_TYPE_Z3(TMC26X)
-    #define Z3_MAX_CURRENT    1000
+    #define Z3_MAX_CURRENT    1500
     #define Z3_SENSE_RESISTOR   91
     #define Z3_MICROSTEPS       Z_MICROSTEPS
   #endif
 
   #if AXIS_DRIVER_TYPE_Z4(TMC26X)
-    #define Z4_MAX_CURRENT    1000
+    #define Z4_MAX_CURRENT    1500
     #define Z4_SENSE_RESISTOR   91
     #define Z4_MICROSTEPS       Z_MICROSTEPS
   #endif
