@@ -634,14 +634,14 @@
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
 #define PREVENT_COLD_EXTRUSION
-#define EXTRUDE_MINTEMP 170
+#define EXTRUDE_MINTEMP 200
 
 /**
  * Prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 600
+#define EXTRUDE_MAXLENGTH 120
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -1067,8 +1067,8 @@
  *     O-- FRONT --+
  */
 
-//BL touch with offsets x = 0 y = -29.75 z = 3
-#define NOZZLE_TO_PROBE_OFFSET {34.5, 0, 3}
+//BL touch with offsets x = 0 y = -29.75 z = -1
+#define NOZZLE_TO_PROBE_OFFSET {34.5, 0, -1}
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
